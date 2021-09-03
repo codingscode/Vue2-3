@@ -8,6 +8,7 @@ elemento_botao.addEventListener('click', () => {
    const elemento_itemlista = document.createElement('li')
    elemento_itemlista.textContent = valor
    elemento_lista.appendChild(elemento_itemlista)
+   elemento_entrada.value = ''
 })
 
 
