@@ -1,7 +1,7 @@
 <template>
    <div id="app">
       <form action="" >
-         <input type="text" v-model="entrada" ><br>
+         <input type="text" v-model="opcoes" ><br>
          <input type="checkbox" value="opcao-1" v-model="opcoes" >Opção 1
          <input type="checkbox" value="opcao-2" v-model="opcoes" >Opção 2
          <input type="checkbox" value="opcao-3" v-model="opcoes" >Opção 3         
