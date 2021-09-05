@@ -1,6 +1,6 @@
 <template>
    <div id="app">
-      <h1>...</h1>
+      <h1>{{entrada}}</h1>
       <input type="text" v-model="entrada" >
      
    </div>
@@ -14,7 +14,9 @@
 export default {
    name: 'App',
    data() {
-      this.entrada = 'olá'
+      return {
+         entrada: 'olá'
+      }
    },
    components: {
      
