@@ -10,6 +10,8 @@ faz uma lista adicionando-se
 
 jsfiddle.net
 
+mostra a função data
+
 
 
 
