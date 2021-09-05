@@ -1,9 +1,12 @@
 <template>
    <div id="app">
-      <h1>{{entrada}}</h1>
-      <input type="text" v-model="entrada" ><br>
-      <a :href="url" >Ir ao site</a>
-      <pre>{{ $data}}</pre>
+      <form action="" >
+         <input type="text" v-model="entrada" ><br>
+         <input type="checkbox" value="opcao-1" v-model="opcoes" >Opção 1
+         <input type="checkbox" value="opcao-2" v-model="opcoes" >Opção 2
+         <input type="checkbox" value="opcao-3" v-model="opcoes" >Opção 3         
+         <p>Você selecionou {{opcoes.join(', ')}}</p>
+      </form>
    </div>
 
    
@@ -17,7 +20,7 @@ export default {
    data() {
       return {
          entrada: 'olá',
-         url: 'https://codigoonclick.com'
+         opcoes: []
       }
    },
    components: {
