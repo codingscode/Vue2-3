@@ -1,9 +1,7 @@
 <template>
-   <ul>
-      <li v-for="(valor, propriedade) in animais" :key="propriedade" >
-         O {{propriedade}} faz {{valor}}
-      </li>
-   </ul>
+   <div id="app" >
+      {{ mostrarTitulo() }}
+   </div>
 
 </template>
 
@@ -14,9 +12,12 @@ export default {
    name: 'App',
    data() {
       return {
-         animais: {
-            cachorro: 'au au', gato: 'miau', passaro: 'bentivi'
-         }
+         titulo: 'olá mundo com vue'
+      }
+   },
+   methods: {
+      mostrarTitulo() {
+         return 'olá mundo com methods'
       }
    },
    components: {
