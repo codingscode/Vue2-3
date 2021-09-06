@@ -1,7 +1,10 @@
 <template>
    <div id="app" >
-      <h1>{{ titulo }}</h1>
-      {{ mostrarTitulo() }}
+      <h1 v-once >{{ titulo }}</h1>
+      <p>
+         {{ mostrarTitulo() }}
+      </p>
+      
    </div>
 
 </template>
