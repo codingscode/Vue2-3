@@ -1,6 +1,6 @@
 <template>
    <ul>
-      <li v-for="(cada, indice) in 5" :key="indice" >{{ cada }}</li>
+      <li v-for="(cada, indice) in 5" :key="indice" >{{ 6 - cada }}</li>
    </ul>
 
 </template>
