@@ -1,6 +1,8 @@
 <template>
    <ul>
-      <li v-for="(cada, indice) in [8, 3, 2, 21, 5]" :key="indice" >{{ cada }}</li>
+      <li v-for="(cada, i) in animais" :key="i" >
+         O {{cada}} faz {{sons[i]}}
+      </li>
    </ul>
 
 </template>
@@ -12,7 +14,8 @@ export default {
    name: 'App',
    data() {
       return {
-         contador: 7
+         animais: ['cachorro', 'gato', 'passaro'],
+         sons: ['au au', 'miau', 'bentivi']
       }
    },
    components: {
