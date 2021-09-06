@@ -4,7 +4,7 @@
       <p>
          {{ mostrarTitulo() }}
       </p>
-      <p>{{vinculoHTML}}</p>
+      <p v-html="vinculoHTML" ></p>
       
    </div>
 
