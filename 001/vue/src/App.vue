@@ -1,5 +1,6 @@
 <template>
    <div id="app" >
+      <h1>{{ titulo }}</h1>
       {{ mostrarTitulo() }}
    </div>
 
@@ -17,7 +18,8 @@ export default {
    },
    methods: {
       mostrarTitulo() {
-         return 'olá mundo com methods'
+         this.titulo = 'olá mundo desse methods'
+         return this.titulo
       }
    },
    components: {
