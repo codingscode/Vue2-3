@@ -1,15 +1,11 @@
 <template>
-   <div id="app">
-      <form action="" >
-         <input type="text" v-model="opcoes" ><br>
-         <input type="checkbox" value="opcao-1" v-model="opcoes" >Opção 1
-         <input type="checkbox" value="opcao-2" v-model="opcoes" >Opção 2
-         <input type="checkbox" value="opcao-3" v-model="opcoes" >Opção 3         
-         <p>Você selecionou {{opcoes.join(', ')}}</p>
-      </form>
-   </div>
+   <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>                  
+   </ul>
 
-   
 </template>
 
 <script>
@@ -19,8 +15,7 @@ export default {
    name: 'App',
    data() {
       return {
-         entrada: 'olá',
-         opcoes: []
+         contador: 7
       }
    },
    components: {
