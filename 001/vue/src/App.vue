@@ -4,6 +4,7 @@
       <p>
          {{ mostrarTitulo() }}
       </p>
+      <p>{{vinculoHTML}}</p>
       
    </div>
 
@@ -16,7 +17,8 @@ export default {
    name: 'App',
    data() {
       return {
-         titulo: 'olá mundo com vue'
+         titulo: 'olá mundo com vue',
+         vinculoHTML: '<a href="https://codigoonclick.com" >Código OnClick</a>'
       }
    },
    methods: {
