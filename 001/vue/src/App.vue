@@ -1,7 +1,7 @@
 <template>
    <ul>
-      <li v-for="(cada, i) in animais" :key="i" >
-         O {{cada}} faz {{sons[i]}}
+      <li v-for="(valor, propriedade) in animais" :key="propriedade" >
+         O {{propriedade}} faz {{valor}}
       </li>
    </ul>
 
@@ -14,8 +14,9 @@ export default {
    name: 'App',
    data() {
       return {
-         animais: ['cachorro', 'gato', 'passaro'],
-         sons: ['au au', 'miau', 'bentivi']
+         animais: {
+            cachorro: 'au au', gato: 'miau', passaro: 'bentivi'
+         }
       }
    },
    components: {
