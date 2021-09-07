@@ -3,6 +3,7 @@
       <div v-show="eMadrugada" >
          Oi, é de madrugada.
       </div>
+      <div >{{(new Date('4 January 02:50')).getHours()}}</div>
    </div>
 
 </template>
@@ -22,7 +23,7 @@ export default {
    },
    computed: {
       eMadrugada() {
-         return new Date().getHours() < 21
+         return (new Date('4 January 09:50')).getHours() < 7
       }
    }
    ,
