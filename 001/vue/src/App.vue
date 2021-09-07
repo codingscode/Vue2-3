@@ -3,7 +3,9 @@
       <div v-if="eMadrugada" >
          Oi, é de madrugada.
       </div>
-      <div >{{(new Date('4 January 02:50')).getHours()}}</div>
+      <div v-else >
+         a de cima deu falsa
+      </div>
    </div>
 
 </template>
