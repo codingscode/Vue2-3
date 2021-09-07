@@ -1,6 +1,6 @@
 <template>
    <div id="app" >
-      <div v-show="eMadrugada" >
+      <div v-if="eMadrugada" >
          Oi, é de madrugada.
       </div>
       <div >{{(new Date('4 January 02:50')).getHours()}}</div>
@@ -23,7 +23,7 @@ export default {
    },
    computed: {
       eMadrugada() {
-         return (new Date('4 January 09:50')).getHours() < 7
+         return (new Date('4 Jaaaanuary 04:50')).getHours() < 6  // erro
       }
    }
    ,
