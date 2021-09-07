@@ -14,12 +14,18 @@ export default {
    name: 'App',
    data() {
       return {
-         eMadrugada: true
+         //eMadrugada: true
       }
    },
    methods: {
       
    },
+   computed: {
+      eMadrugada() {
+         return new Date().getHours() < 21
+      }
+   }
+   ,
    components: {
      
    }
