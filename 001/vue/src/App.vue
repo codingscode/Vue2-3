@@ -1,11 +1,12 @@
 <template>
    <div id="app" >
-      <div v-if="eMadrugada" >
-         Oi, é de madrugada.
-      </div>
-      <div v-else >
-         a de cima deu falsa
-      </div>
+      <h1 v-once >
+         {{ titulo }}
+      </h1>
+      <p>
+         {{mostrarTitulo()}}
+      </p>
+      <p v-html="vinculoHTML" ></p>     
    </div>
 
 </template>
@@ -17,16 +18,18 @@ export default {
    name: 'App',
    data() {
       return {
-         //eMadrugada: true
+         titulo: 'olá mundo com vue',
+         vinculoHTML: '<a href="https://codigoonclick.com" >Código OnClick</a>'
       }
    },
    methods: {
-      
+      mostrarTitulo() {
+         this.titulo = 'olá deste methods'
+         return this.titulo
+      }
    },
    computed: {
-      eMadrugada() {
-         return (new Date('4 Jaaaanuary 04:50')).getHours() < 6  // erro
-      }
+      
    }
    ,
    components: {
