@@ -16,7 +16,7 @@ aparece os marcados
 
 não altera
 
-
+se true mostra, senão não é mostrada
 
 
 

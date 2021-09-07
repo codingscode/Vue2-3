@@ -1,11 +1,8 @@
 <template>
    <div id="app" >
-      <h1 v-once >{{ titulo }}</h1>
-      <p>
-         {{ mostrarTitulo() }}
-      </p>
-      <p v-html="vinculoHTML" ></p>
-      
+      <div v-show="eMadrugada" >
+         Oi, é de madrugada.
+      </div>
    </div>
 
 </template>
@@ -17,15 +14,11 @@ export default {
    name: 'App',
    data() {
       return {
-         titulo: 'olá mundo com vue',
-         vinculoHTML: '<a href="https://codigoonclick.com" >Código OnClick</a>'
+         eMadrugada: true
       }
    },
    methods: {
-      mostrarTitulo() {
-         this.titulo = 'olá mundo desse methods'
-         return this.titulo
-      }
+      
    },
    components: {
      
