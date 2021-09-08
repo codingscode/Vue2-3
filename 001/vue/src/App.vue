@@ -8,7 +8,7 @@
       </p>
       <p v-html="vinculoHTML" ></p>
       <input type="text" v-model="contadorInicial" @keyup.enter="setarContador" >
-      <button @click="aumentarContador" >Somar +1</button>
+      <button @click="aumentarContador(2)" >Somar +2</button>
       <p>{{ contador }}</p>
       <p @mousemove="atualizarValores" class="aqui" >
          Valor de X: {{ x }}<br>
@@ -38,8 +38,8 @@ export default {
          this.titulo = 'olá deste methods'
          return this.titulo
       },
-      aumentarContador() {
-         this.contador++
+      aumentarContador(valor) {
+         this.contador += valor
       },
       setarContador() {
          this.contador = this.contadorInicial
