@@ -18,6 +18,9 @@ não altera
 
 se true mostra, senão não é mostrada
 
+aumentando valor de contador
+
+
 
 
 
