@@ -7,7 +7,8 @@
          {{mostrarTitulo()}}
       </p>
       <p v-html="vinculoHTML" ></p>
-      <input type="text" ><button v-on:click="aumentarContador" >Somar +1</button>
+      <input type="text" v-model="contadorInicial" v-on:keyup.enter="setarContador" >
+      <button v-on:click="aumentarContador" >Somar +1</button>
       <p>{{ contador }}</p>
    </div>
 
@@ -22,7 +23,8 @@ export default {
       return {
          titulo: 'olá mundo com vue',
          vinculoHTML: '<a href="https://codigoonclick.com" >Código OnClick</a>',
-         contador: 1
+         contador: 1,
+         contadorInicial: 0
       }
    },
    methods: {
@@ -32,6 +34,9 @@ export default {
       },
       aumentarContador() {
          this.contador++
+      },
+      setarContador() {
+         this.contador = this.contadorInicial
       }
    },
    computed: {

@@ -20,7 +20,7 @@ se true mostra, senão não é mostrada
 
 aumentando valor de contador
 
-
+digitando-se no campo um número e apertando enter seta-se valor para contador
 
 
 
