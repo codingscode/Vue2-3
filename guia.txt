@@ -22,7 +22,7 @@ aumentando valor de contador
 
 digitando-se no campo um número e apertando enter seta-se valor para contador
 
-
+mostra valores x e y do espaço deles
 
 
 

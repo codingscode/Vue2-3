@@ -10,6 +10,10 @@
       <input type="text" v-model="contadorInicial" @keyup.enter="setarContador" >
       <button @click="aumentarContador" >Somar +1</button>
       <p>{{ contador }}</p>
+      <p @mousemove="atualizarValores" class="aqui" >
+         Valor de X: {{ x }}<br>
+         Valor de Y: {{ y }}
+      </p>
    </div>
 
 </template>
@@ -24,7 +28,9 @@ export default {
          titulo: 'olá mundo com vue',
          vinculoHTML: '<a href="https://codigoonclick.com" >Código OnClick</a>',
          contador: 1,
-         contadorInicial: 0
+         contadorInicial: 0,
+         x: 0,
+         y: 0
       }
    },
    methods: {
@@ -37,6 +43,10 @@ export default {
       },
       setarContador() {
          this.contador = this.contadorInicial
+      },
+      atualizarValores() {
+         this.x = event.clientX
+         this.y = event.clientY
       }
    },
    computed: {
@@ -52,6 +62,12 @@ export default {
 </script>
 
 <style>
+#app {
+   border: 3px solid lightblue;
+}
 
+.aqui {
+   border: 3px solid lightgreen;
+}
 
 </style>
