@@ -7,8 +7,8 @@
          {{mostrarTitulo()}}
       </p>
       <p v-html="vinculoHTML" ></p>
-      <input type="text" v-model="contadorInicial" v-on:keyup.enter="setarContador" >
-      <button v-on:click="aumentarContador" >Somar +1</button>
+      <input type="text" v-model="contadorInicial" @keyup.enter="setarContador" >
+      <button @click="aumentarContador" >Somar +1</button>
       <p>{{ contador }}</p>
    </div>
 
