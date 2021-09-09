@@ -26,6 +26,39 @@ mostra valores x e y do espaço deles
 
 passando parametro no método
 
+https://openexchangerates.github.io/accounting.js/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

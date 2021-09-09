@@ -1,6 +1,19 @@
 <template>
    <div id="app" >
-     {{ 'olá Vue' | capitalize }}
+      <table>
+         <thead>
+            <tr>
+               <th>Item</th>
+               <th>Preço</th>               
+            </tr>
+         </thead>
+         <tbody>
+            <tr v-for="(cada, i) in inventario" :key="i" >
+               <td>{{cada.nome}}</td>
+               <td>{{cada.preco}}</td>              
+            </tr>
+         </tbody>
+      </table>
       
    </div>
 
@@ -8,17 +21,20 @@
 
 <script>
 /*
-Vue.filter('capitalize', function(string) {
-   var [primeiroCaract, ...restoCaract] = string
-   return primeiroCaract.toUpperCase() + restoCaract.join('')
-})
+
+
 */
 
 export default {
    name: 'App',
    data() {
       return {
-         
+         inventario: [
+            {nome: 'Galaxy', preco: '250'},
+            {nome: 'iPhone', preco: '450'},
+            {nome: 'iPad', preco: '389.50'},
+            {nome: 'Laptop Gamer', preco: '665.99'}                                    
+         ]         
       }
    },
    methods: {
