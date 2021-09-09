@@ -1,6 +1,6 @@
 <template>
    <div id="app" >
-     {{ 'olá vue' | capitalize }}
+     {{ 'olá Vue' | capitalize }}
       
    </div>
 

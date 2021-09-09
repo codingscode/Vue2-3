@@ -5,7 +5,7 @@ Vue.config.productionTip = false
 
 Vue.filter('capitalize', function(string) {
    var [primeiroCaract, ...restoCaract] = string
-   return primeiroCaract.toUpperCase() + restoCaract.join('')
+   return primeiroCaract.toUpperCase() + restoCaract.join('').toLowerCase() 
 })
 
 
