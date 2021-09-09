@@ -28,9 +28,10 @@ passando parametro no método
 
 https://openexchangerates.github.io/accounting.js/
 
+https://github.com/openexchangerates/accounting.js
 
-
-
+no terminal:
+   npm install accounting
 
 
 

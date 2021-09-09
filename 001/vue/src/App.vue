@@ -10,7 +10,7 @@
          <tbody>
             <tr v-for="(cada, i) in inventario" :key="i" >
                <td>{{cada.nome}}</td>
-               <td>{{cada.preco}}</td>              
+               <td>{{cada.preco | moeda}}</td>              
             </tr>
          </tbody>
       </table>
@@ -21,7 +21,9 @@
 
 <script>
 /*
-
+Vue.filter('moeda', function(valor) {
+   return accounting.formatMoney(valor)
+})
 
 */
 

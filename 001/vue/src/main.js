@@ -3,9 +3,10 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
-Vue.filter('capitalize', function(string) {
-   var [primeiroCaract, ...restoCaract] = string
-   return primeiroCaract.toUpperCase() + restoCaract.join('').toLowerCase() 
+var accounting = require("accounting")
+
+Vue.filter('moeda', function(valor) {
+   return accounting.formatMoney(valor)
 })
 
 
