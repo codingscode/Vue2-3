@@ -1,31 +1,38 @@
 <template>
    <div id="app" >
-      A revolução francesa foi em: {{ inicioRevFranc | inicio }}      
+      <input type="text" v-model="nome" >
+      <input type="text" id="apelido" value="Snow" >
+      <button v-on:click="guardarApelido" >Guardar apelido</button>
+      <output > {{ computedNomeCompleto }} </output>
    </div>
 
 </template>
 
 <script>
 /*
-Vue.filter('inicio', function(data) {
-   return moment(data).format('LLL')
-})
+
 
 */
+
+let apelido = 'Snow'
 
 export default {
    name: 'App',
    data() {
       return {
-         inicioRevFranc: '1789-05-05 17:12'
+         nome: 'John'
       }
    },
    methods: {
-      
-      
+      guardarApelido() {
+         apelido = this.$el.querySelector('#apelido').value
+            
+      }
    },
    computed: {
-      
+      computedNomeCompleto() {
+         return `${this.nome} ${apelido}`
+      }
    }
    ,
    components: {

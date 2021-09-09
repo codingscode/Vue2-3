@@ -40,7 +40,7 @@ no terminal:
    npm install moment --save
 
 
-
+primeiro snow nao muda, mudando john e clicando no botao, snow depois pode altera quando se muda o 1º campo
 
 
 
