@@ -4,9 +4,8 @@ import App from './App.vue'
 Vue.config.productionTip = false
 
 Vue.filter('capitalize', function(string) {
-   var primeiroCaract = string.charAt(0).toUpperCase()
-   var restoCaract = string.slice(1, string.length)
-   return primeiroCaract + restoCaract
+   var [primeiroCaract, ...restoCaract] = string
+   return primeiroCaract.toUpperCase() + restoCaract.join('')
 })
 
 
