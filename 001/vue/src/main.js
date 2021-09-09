@@ -7,7 +7,7 @@ Vue.config.productionTip = false
 
 
 Vue.filter('inicio', function(data) {
-   return moment(data).format('LL')
+   return moment(data).format('LLL')
 })
 
 

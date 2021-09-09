@@ -8,7 +8,7 @@
 <script>
 /*
 Vue.filter('inicio', function(data) {
-   return moment(data).format('LL')
+   return moment(data).format('LLL')
 })
 
 */
@@ -17,7 +17,7 @@ export default {
    name: 'App',
    data() {
       return {
-         inicioRevFranc: '1789-05-05'
+         inicioRevFranc: '1789-05-05 17:12'
       }
    },
    methods: {
