@@ -9,13 +9,14 @@
             </tr>
          </thead>
          <tbody>
-            <tr v-for="(cada, i) in represas" :key="i" >
+            <tr v-for="(cada, i) in represasPorEletricidade" :key="i" >
                <td >{{ cada.nome }}</td>
                <td >{{ cada.pais }}</td>
                <td >{{ cada.eletricidade }} MegaWatts </td>
             </tr>
          </tbody>
       </table>
+     
    </div>
 
 </template>
@@ -39,13 +40,14 @@ export default {
          ] 
       }
    },
-   methods: {
-
-   },
    computed: {
-
-   }
-   ,
+      represasPorEletricidade() {
+         return [...this.represas].sort((a, b) => b.eletricidade - a.eletricidade)  // só funciona com a cópia
+      }
+   },
+   methods: {
+     
+   },
    components: {
      
    }
