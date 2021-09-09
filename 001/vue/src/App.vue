@@ -1,9 +1,17 @@
 <template>
    <div id="app" >
-      <input type="text" v-model="nome" >
-      <input type="text" id="apelido" value="Snow" >
-      <button v-on:click="guardarApelido" >Guardar apelido</button>
-      <output > {{ computedNomeCompleto }} </output>
+      <table>
+         <thead>
+            <tr>
+               <th>Nome</th>
+               <th>País</th>
+               <th>Eletricidade</th>                              
+            </tr>
+         </thead>
+         <tbody>
+         
+         </tbody>
+      </table>
    </div>
 
 </template>
@@ -14,25 +22,24 @@
 
 */
 
-let apelido = 'Snow'
 
 export default {
    name: 'App',
    data() {
       return {
-         nome: 'John'
+         represa: [
+            {nome: 'Represa Nurek', pais: 'Tajikistão', eletricidade: 32000},
+            {nome: 'Tres gargantas', pais: 'China', eletricidade: 22500},
+            {nome: 'Represa Tarbela', pais: 'Paquistão', eletricidade: 3500},
+            {nome: 'Represa Guri', pais: 'Venezuela', eletricidade: 10200}                                    
+         ] 
       }
    },
    methods: {
-      guardarApelido() {
-         apelido = this.$el.querySelector('#apelido').value
-            
-      }
+
    },
    computed: {
-      computedNomeCompleto() {
-         return `${this.nome} ${apelido}`
-      }
+
    }
    ,
    components: {
