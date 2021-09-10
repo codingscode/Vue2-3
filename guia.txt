@@ -44,6 +44,12 @@ primeiro snow nao muda, mudando john e clicando no botao, snow depois pode alter
 
 ordem decrescente
 
+-----------------------------------
+
+usando vue3
+
+
+
 
 
 

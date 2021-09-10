@@ -1,13 +1,12 @@
 <template>
    <div id="app" >
-      A carteira está {{estaAtivo === 'ativado' ? 'ativa' : 'desativada' }}     
+      {{contador}}
    </div>
 
 </template>
 
 <script>
 /*
-
 
 */
 
@@ -16,8 +15,13 @@ export default {
    name: 'App',
    data() {
       return {
-         estaAtivo: 'ativado'
+         contador: 0
          
+      }
+   },
+   watch: {
+      estaAtivo:function() {
+         console.log('troca do valor de estado')
       }
    },
    computed: {
@@ -25,7 +29,9 @@ export default {
       
    },
    methods: {
-     
+       aumentar() {
+          this.contador += 1
+       }
    },
    components: {
      
