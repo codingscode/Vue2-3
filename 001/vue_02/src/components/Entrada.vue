@@ -2,9 +2,9 @@
    <div class="entrada-envolvedor" >
       <div class="label" >
          <label :for="nome" >{{ nome }}</label>
-         <div class="erro" >Erro</div>
+         <div class="erro" >{{ erro }}</div>
       </div>
-      <input :id="nome" type="text"  />
+      <input :id="nome" type="text" v-model="valor" />
    </div>
    
 </template>
@@ -17,6 +17,19 @@ export default {
    props: {
       nome: { type: String, required: true },
       regras: { type: Object }
+   },
+   data() {
+      return {
+         valor: ''
+      }
+   },
+   computed: {
+      erro() {
+         if (this.regras.requerido && this.valor.length === 0) {
+            return 'Requerido'
+         }
+         return ''
+      }
    }
 }
 </script>
