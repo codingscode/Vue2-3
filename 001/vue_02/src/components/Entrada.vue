@@ -1,5 +1,9 @@
 <template>
-   <input type="text"  />
+   <div>
+      <label :for="nome" >{{ nome }}</label>
+      <input type="text"  />
+   </div>
+   
 </template>
 
 <script>
@@ -7,7 +11,9 @@
 
 export default {
    name: 'Entrada',
-   props: {}
+   props: {
+      nome: { type: String, required: true }
+   }
 }
 </script>
 

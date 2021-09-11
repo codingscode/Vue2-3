@@ -1,7 +1,7 @@
 <template>
    <div>
       Vue 3 <br>
-      <Entrada />
+      <Entrada nome="Usuario" />
       <Outro cor="white" fundo="green" :desabilitado="!valido" />
    </div>
 </template>
