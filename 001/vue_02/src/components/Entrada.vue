@@ -25,7 +25,7 @@ export default {
    },
    computed: {
       erro() {
-         if (this.regras.requerido && this.valor.length === 0) {
+         if (this.regras.requerido && !this.valor) {
             return 'Requerido'
          }
          
