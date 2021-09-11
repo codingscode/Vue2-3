@@ -27,9 +27,12 @@ export default {
       flex-direction: column;
    }
 
+   .erro {
+      color: red;
+   }
+
    .label {
       display: flex;
-      color: red;
       justify-content: space-between;
    }
    
