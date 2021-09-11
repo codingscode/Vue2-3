@@ -1,19 +1,20 @@
 <template>
    <div>
-      Vue 3
-      <Outro />
-      <outro cor="white" fundo="green" :desabilitado="!valido" />
+      Vue 3 <br>
+      <Entrada />
+      <Outro cor="white" fundo="green" :desabilitado="!valido" />
    </div>
 </template>
 
 <script>
 
 import Outro from './components/Outro.vue'
+import Entrada from './components/Entrada.vue'
 
 export default {
   name: 'App',
   components: {
-     Outro  
+     Outro, Entrada  
   },
   data() {
      return {
@@ -26,5 +27,9 @@ export default {
 
 <style  >
 
+body {
+   font-family: arial;
+
+}
 
 </style>

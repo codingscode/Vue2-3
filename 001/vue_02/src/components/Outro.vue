@@ -1,10 +1,7 @@
 <template>
    <div>
-      <div >
-          Outro componente
-      </div>
       <button class="classe" :style="{color: cor, background: fundo}" :disabled="desabilitado" >
-          mais conteudo
+          botão
       </button>
    </div>
 
