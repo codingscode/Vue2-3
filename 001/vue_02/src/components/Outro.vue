@@ -1,9 +1,9 @@
 <template>
    <div>
-      <div class="classe" >
+      <div >
           Outro componente
       </div>
-      <div :style="{color: cor, background: fundo, disable: desabilitado}" >
+      <div class="classe" :style="{color: cor, background: fundo, disable: desabilitado}" >
           mais conteudo
       </div>
    </div>
@@ -32,7 +32,20 @@ export default {
 </script>
 
 <style scope>
-   div {
-       border: solid 1px lightblue;
+   .classe {
+       background: none;
+       color: black;
+       border: none;
+       border-radius: 5px;
+       padding: 10px 40px;
+       font-size: 16px;
+       cursor: pointer;
+              
    }
+
+   .classe:hover {
+      filter: brightness(125%);
+   }
+
+   
 </style>
