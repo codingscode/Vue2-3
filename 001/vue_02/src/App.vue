@@ -2,7 +2,7 @@
    <div>
       Vue 3
       <Outro />
-      <outro cor="white" fundo="green" desabilitado="true" />
+      <outro cor="white" fundo="green" :desabilitado="valido" />
    </div>
 </template>
 
@@ -14,13 +14,17 @@ export default {
   name: 'App',
   components: {
      Outro  
+  },
+  data() {
+     return {
+        valido: true
+     }
   }
 
 }
 </script>
 
 <style  >
-#app {
-  
-}
+
+
 </style>

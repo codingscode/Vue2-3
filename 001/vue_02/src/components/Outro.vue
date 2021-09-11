@@ -3,9 +3,9 @@
       <div >
           Outro componente
       </div>
-      <div class="classe" :style="{color: cor, background: fundo, disable: desabilitado}" >
+      <button class="classe" :style="{color: cor, background: fundo}" :disabled="desabilitado" >
           mais conteudo
-      </div>
+      </button>
    </div>
 
 </template>
@@ -23,7 +23,7 @@ export default {
          type: String
       },
       desabilitado: {
-         type: String
+         type: Boolean
       }
    }
    
@@ -47,5 +47,9 @@ export default {
       filter: brightness(125%);
    }
 
+   .classe:disabled {
+      opacity: 0.5;
+      border: solid 3px purple;
+   }
    
 </style>
