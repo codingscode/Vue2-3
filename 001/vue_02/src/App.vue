@@ -2,7 +2,7 @@
    <div>
       Vue 3
       <Outro />
-      <outro />
+      <outro cor="white" fundo="green" desabilitado="true" />
    </div>
 </template>
 

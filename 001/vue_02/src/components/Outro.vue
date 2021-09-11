@@ -3,7 +3,7 @@
       <div class="classe" >
           Outro componente
       </div>
-      <div>
+      <div :style="{color: cor, background: fundo, disable: desabilitado}" >
           mais conteudo
       </div>
    </div>
@@ -14,7 +14,18 @@
 
 
 export default {
-   name: 'Outro'
+   name: 'Outro',
+   props: {
+      cor: {
+         type: String
+      },
+      fundo: {
+         type: String
+      },
+      desabilitado: {
+         type: String
+      }
+   }
    
 }
 
@@ -22,6 +33,6 @@ export default {
 
 <style scope>
    div {
-       border: solid 2px lightblue;
+       border: solid 1px lightblue;
    }
 </style>
