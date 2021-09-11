@@ -1,7 +1,7 @@
 <template>
    <div>
       Vue 3 <br>
-      <Entrada nome="Usuario" />
+      <Entrada nome="Usuario" regras="{ requerido: true, min: 5 }" />
       <Outro cor="white" fundo="green" :desabilitado="!valido" />
    </div>
 </template>

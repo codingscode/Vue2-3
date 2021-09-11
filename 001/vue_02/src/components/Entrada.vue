@@ -1,7 +1,10 @@
 <template>
-   <div>
-      <label :for="nome" >{{ nome }}</label>
-      <input type="text"  />
+   <div class="entrada-envolvedor" >
+      <div class="label" >
+         <label :for="nome" >{{ nome }}</label>
+         <div class="erro" >Erro</div>
+      </div>
+      <input :id="nome" type="text"  />
    </div>
    
 </template>
@@ -12,15 +15,22 @@
 export default {
    name: 'Entrada',
    props: {
-      nome: { type: String, required: true }
+      nome: { type: String, required: true },
+      regras: { type: Object }
    }
 }
 </script>
 
 <style scoped >
-   div {
+   .entrada-envolvedor {
       display: flex;
       flex-direction: column;
+   }
+
+   .label {
+      display: flex;
+      color: red;
+      justify-content: space-between;
    }
    
    input {
