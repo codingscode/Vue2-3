@@ -28,6 +28,11 @@ export default {
          if (this.regras.requerido && this.valor.length === 0) {
             return 'Requerido'
          }
+         
+         if (this.regras.min && this.valor.length < this.regras.min ) {
+            return `Deve entrar com no mínimo ${this.regras.min}`
+         }
+         
          return ''
       }
    }

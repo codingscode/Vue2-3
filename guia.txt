@@ -48,9 +48,9 @@ ordem decrescente
 
 usando vue3
 
+no commit anterior -> campo vazio aparece requerido vermelho, caso contrario some
 
-
-
+entrada valor minimo de 5 caracteres
 
 
 
