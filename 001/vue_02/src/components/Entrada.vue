@@ -21,18 +21,19 @@ export default {
    },
    computed: {
       erro() {
-         if (this.regras.requerido && !this.valor) {
-            return 'Requerido'
-         }
-         
-         if (this.regras.min && this.valor.length < this.regras.min ) {
-            return `Deve entrar com no mínimo ${this.regras.min}`
-         }
-         
-         return ''
+         return this.validar(this.valor)
       }
    },
    methods: {
+      validar(valor) {
+         if (this.regras.requerido && !valor) {
+            return 'Requerido'
+         }
+         
+         if (this.regras.min && valor.length < this.regras.min ) {
+            return `Deve entrar com no mínimo ${this.regras.min}`
+         }
+      },
       entrada($evento) {
          this.$emit('update', { valor: $evento.target.value, nome: this.nome })
       }
