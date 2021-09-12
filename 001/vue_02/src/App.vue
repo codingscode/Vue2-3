@@ -1,7 +1,8 @@
 <template>
    <div>
       Vue 3 <br>
-      <Entrada nome="Usuario" :regras="{ requerido: true, min: 5 }" :valor="usuarionome.valor" />
+      <Entrada nome="Usuario" :regras="{ requerido: true, min: 5 }" :valor="usuarionome.valor" 
+               @update="atualizar" />
       <Entrada nome="Senha" :regras="{ requerido: true, min: 10 }" :valor="senha.valor" />
       <Outro cor="white" fundo="green" :desabilitado="!valido" />
    </div>
@@ -26,6 +27,11 @@ export default {
         senha: {
            valor: '', valido: false
         }
+     }
+  },
+  methods: {
+     atualizar(valor) {
+        console.log(valor)
      }
   }
 

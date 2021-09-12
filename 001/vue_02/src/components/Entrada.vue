@@ -4,7 +4,7 @@
          <label :for="nome" >{{ nome }}</label>
          <div class="erro" >{{ erro }}</div>
       </div>
-      <input :id="nome" type="text" />
+      <input :id="nome" type="text" :valor="valor" @input="entrada" />
    </div>
    
 </template>
@@ -30,6 +30,11 @@ export default {
          }
          
          return ''
+      }
+   },
+   methods: {
+      entrada($evento) {
+         this.$emit('update', $evento.target.value)
       }
    }
 }
