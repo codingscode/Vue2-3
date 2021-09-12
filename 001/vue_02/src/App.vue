@@ -1,8 +1,8 @@
 <template>
    <div>
       Vue 3 <br>
-      <Entrada nome="Usuario" :regras="{ requerido: true, min: 5 }" />
-      <Entrada nome="Senha" :regras="{ requerido: true, min: 10 }" />
+      <Entrada nome="Usuario" :regras="{ requerido: true, min: 5 }" :valor="usuarionome.valor" />
+      <Entrada nome="Senha" :regras="{ requerido: true, min: 10 }" :valor="senha.valor" />
       <Outro cor="white" fundo="green" :desabilitado="!valido" />
    </div>
 </template>
@@ -19,7 +19,13 @@ export default {
   },
   data() {
      return {
-        valido: true
+        valido: true,
+        usuarionome: {
+           valor: 'sdfs', valido: false
+        },
+        senha: {
+           valor: '', valido: false
+        }
      }
   }
 

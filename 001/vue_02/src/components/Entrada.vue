@@ -4,7 +4,7 @@
          <label :for="nome" >{{ nome }}</label>
          <div class="erro" >{{ erro }}</div>
       </div>
-      <input :id="nome" type="text" v-model="valor" />
+      <input :id="nome" type="text" />
    </div>
    
 </template>
@@ -16,12 +16,8 @@ export default {
    name: 'Entrada',
    props: {
       nome: { type: String, required: true },
-      regras: { type: Object }
-   },
-   data() {
-      return {
-         valor: ''
-      }
+      regras: { type: Object },
+      valor: { type: String }
    },
    computed: {
       erro() {

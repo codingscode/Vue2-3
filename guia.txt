@@ -52,7 +52,7 @@ no commit anterior -> campo vazio aparece requerido vermelho, caso contrario som
 
 entrada valor minimo de 5 caracteres
 
-
+experimentar trocar valor em App.vue
 
 
 
