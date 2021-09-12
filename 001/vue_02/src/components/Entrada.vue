@@ -4,7 +4,7 @@
          <label :for="nome" >{{ nome }}</label>
          <div class="erro" >{{ erro }}</div>
       </div>
-      <input :id="nome" type="text" :valor="valor" @input="entrada" />
+      <input :id="nome" type="text" :value="valor" @input="entrada" />
    </div>
    
 </template>

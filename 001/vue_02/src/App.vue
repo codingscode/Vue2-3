@@ -1,7 +1,7 @@
 <template>
    <div>
       Vue 3 <br>
-      <Entrada nome="Usuario" :regras="{ requerido: true, min: 5 }" :valor="usuarionome.valor" 
+      <Entrada nome="Usuario" :regras="{ requerido: true, min: 5 }" :valor="usuario.valor" 
                @update="atualizar" />
       <Entrada nome="Senha" :regras="{ requerido: true, min: 10 }" :valor="senha.valor" />
       <Outro cor="white" fundo="green" :desabilitado="!valido" />
@@ -21,7 +21,7 @@ export default {
   data() {
      return {
         valido: true,
-        usuarionome: {
+        usuario: {
            valor: 'sdfs', valido: false
         },
         senha: {
@@ -30,8 +30,9 @@ export default {
      }
   },
   methods: {
-     atualizar(valor) {
-        console.log(valor)
+     atualizar(payload) {
+        console.log(payload)
+        this[payload.nome.toLowerCase()].valor = payload.valor
      }
   }
 
