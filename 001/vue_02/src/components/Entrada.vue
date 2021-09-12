@@ -35,7 +35,7 @@ export default {
          }
       },
       entrada($evento) {
-         this.$emit('update', { valor: $evento.target.value, nome: this.nome })
+         this.$emit('update', { valor: $evento.target.value, nome: this.nome, valido: this.validar($evento.target.value) ? false : true})
       }
    }
 }

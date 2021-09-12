@@ -60,7 +60,7 @@ commit anterior -> com no minimo 5 carct sai o aviso
 
 idem
 
-
+o campo preenchendo o requisito false passa para true
 
 
 

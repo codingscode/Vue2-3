@@ -35,7 +35,7 @@ export default {
   methods: {
      atualizar(payload) {
         console.log(payload)
-        this[payload.nome.toLowerCase()].valor = payload.valor
+        this[payload.nome.toLowerCase()] = { valor: payload.valor, valido: payload.valido }
      }
   }
 
