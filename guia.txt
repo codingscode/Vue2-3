@@ -54,6 +54,7 @@ entrada valor minimo de 5 caracteres
 
 experimentar trocar valor em App.vue
 
+ficar digitando
 
 
 

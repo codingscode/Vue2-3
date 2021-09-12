@@ -34,7 +34,7 @@ export default {
    },
    methods: {
       entrada($evento) {
-         this.$emit('update', $evento.target.value)
+         this.$emit('update', { valor: $evento.target.value, nome: this.nome })
       }
    }
 }
