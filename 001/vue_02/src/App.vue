@@ -3,7 +3,8 @@
       Vue 3 <br>
       <Entrada nome="Usuario" :regras="{ requerido: true, min: 5 }" :valor="usuario.valor" 
                @update="atualizar" />
-      <Entrada nome="Senha" :regras="{ requerido: true, min: 10 }" :valor="senha.valor" />
+      <Entrada nome="Senha" :regras="{ requerido: true, min: 10 }" :valor="senha.valor"
+               @update="atualizar" />
       <Outro cor="white" fundo="green" :desabilitado="!valido" />
    </div>
 </template>
@@ -22,7 +23,7 @@ export default {
      return {
         valido: true,
         usuario: {
-           valor: 'sdfs', valido: false
+           valor: '', valido: false
         },
         senha: {
            valor: '', valido: false

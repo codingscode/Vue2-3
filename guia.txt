@@ -56,6 +56,29 @@ experimentar trocar valor em App.vue
 
 ficar digitando
 
+commit anterior -> com no minimo 5 carct sai o aviso
+
+idem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
