@@ -1,12 +1,12 @@
 <template>
-   <div>
+   <form @submit.prevent="enviar" class="form" >
       Vue 3 <br>
       <Entrada nome="Usuario" :regras="{ requerido: true, min: 5 }" :valor="usuario.valor" 
                @update="atualizar" tipo="text" />
       <Entrada nome="Senha" :regras="{ requerido: true, min: 10 }" :valor="senha.valor"
                @update="atualizar" tipo="password" />
       <Outro cor="white" fundo="green" :desabilitado="!valido" />
-   </div>
+   </form>
 </template>
 
 <script>
@@ -35,6 +35,10 @@ export default {
      }
   },
   methods: {
+     enviar($evento) {
+        $evento.preventDefault()
+        console.log('Enviar')
+     },
      atualizar(payload) {
         console.log(payload)
         this[payload.nome.toLowerCase()] = { valor: payload.valor, valido: payload.valido }
@@ -49,6 +53,11 @@ export default {
 body {
    font-family: arial;
 
+}
+
+.form {
+   max-width: 400px;
+   width: 50%;
 }
 
 </style>
