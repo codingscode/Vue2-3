@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-     Vue
+     Olá Vue
   </div>  
 </template>
 
