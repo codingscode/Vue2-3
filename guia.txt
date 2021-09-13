@@ -62,7 +62,7 @@ idem
 
 o campo preenchendo o requisito false passa para true
 
-
+o botão só fica habilitado quando é satisfeita as condições nos dois campos
 
 
 

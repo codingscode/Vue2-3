@@ -3,10 +3,8 @@
       Vue 3 <br>
       <Entrada nome="Usuario" :regras="{ requerido: true, min: 5 }" :valor="usuario.valor" 
                @update="atualizar" />
-      {{ usuario }}
       <Entrada nome="Senha" :regras="{ requerido: true, min: 10 }" :valor="senha.valor"
                @update="atualizar" />
-      {{ senha }}
       <Outro cor="white" fundo="green" :desabilitado="!valido" />
    </div>
 </template>
@@ -23,13 +21,17 @@ export default {
   },
   data() {
      return {
-        valido: true,
         usuario: {
            valor: '', valido: false
         },
         senha: {
            valor: '', valido: false
         }
+     }
+  },
+  computed: {
+     valido() {
+        return this.usuario.valido && this.senha.valido
      }
   },
   methods: {
