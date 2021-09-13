@@ -1,40 +1,23 @@
 <template>
-   <div>
-      Vue
-   </div>
+  <div id="app">
+     Vue
+  </div>  
 </template>
 
 <script>
-
-
-
 export default {
-  name: 'App',
-  components: {
+  name: 'app',
+  data () {
+    return {
      
+    }
   },
-  data() {
-     return {
-        
-     }
-  },
-  computed: {
-     
-  },
-  methods: {
-    
+  methods:{
+   
   }
-
 }
 </script>
 
-<style  >
-
-   body {
-      font-family: arial;
-   
-   }
-
-
-
+<style>
+  
 </style>
