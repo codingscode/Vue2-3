@@ -46,6 +46,7 @@ export default {
      adicionarNota() {
         let { texto, titulo } = this.nota
         this.notas.push({ texto, titulo, encontro: new Date(Date.now()).toLocaleString() })
+        this.nota = { titulo: '', texto: '' }
      },
      removerNota(indice) {
         this.notas.splice(indice, 1)
