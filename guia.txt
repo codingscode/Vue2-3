@@ -80,7 +80,7 @@ extensão vue dev tools browser
 
 em Vue  ver os objetos sendo adicionados ao clicar
 
-
+já se pode adicionar na lista
 
 
 
