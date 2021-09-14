@@ -22,7 +22,8 @@
                 </div>
                 <div class="card-subtitle mb-2 text-muted" >{{ cada.encontro }}</div>
                 <div class="card-text" >{{ cada.texto }}</div>    
-             </div>   
+             </div>
+             <button class="fechar" @click="removerNota(i)" >&times;</button>
            </div>
         </div>
      </div>
@@ -45,6 +46,9 @@ export default {
      adicionarNota() {
         let { texto, titulo } = this.nota
         this.notas.push({ texto, titulo, encontro: new Date(Date.now()).toLocaleString() })
+     },
+     removerNota(indice) {
+        this.notas.splice(indice, 1)
      }
   }
 }
@@ -68,6 +72,12 @@ export default {
       padding: 5px;
    }
    
-   
+   .fechar {
+      background: transparent;
+      border: none;
+      font-size:larger;
+      font-weight: 400;
+      color: red;
+   }
   
 </style>

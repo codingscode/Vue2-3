@@ -82,7 +82,7 @@ em Vue  ver os objetos sendo adicionados ao clicar
 
 já se pode adicionar na lista
 
-
+se pode remover
 
 
 
