@@ -84,11 +84,17 @@ já se pode adicionar na lista
 
 se pode remover
 
+-----------------------------------------
 
 
 
+no terminal:
+   npm i -g @vue/cli-init
+   vue init webpack vue_004
 
 
+no terminal:
+   npm run dev
 
 
 
