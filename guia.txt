@@ -71,11 +71,14 @@ cada campo tem um tipo diferente . texto e senha.
 
 gerador de notas
 
+no terminal:
+   npm run dev
+
 bootstrap site
 
+extensão vue dev tools browser
 
-
-
+em Vue  ver os objetos sendo adicionados ao clicar
 
 
 

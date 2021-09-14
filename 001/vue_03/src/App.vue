@@ -12,6 +12,7 @@
         </div>
 
      </div>
+     <button class="btn btn-primary" @click="adicionarNota" >Enviar</button>
   </div>  
 </template>
 
@@ -21,11 +22,17 @@ export default {
   data () {
     return {
        titulo: 'Gestão de notas',
-       nota: { titulo: '', texto: '' }
+       nota: { titulo: '', texto: '' },
+       notas: [
+          { titulo: 'ir ao cinema', texto: 'examinar filmes de estreia', encontro: new Date(Date.now()).toLocaleDateString() }
+       ]
     }
   },
   methods:{
-   
+     adicionarNota() {
+        let { texto, titulo } = this.nota
+        this.notas.push({ texto, titulo, fecha: new Date(Date.now()).toLocaleString() })
+     }
   }
 }
 </script>
