@@ -18,7 +18,12 @@ var componente3 = Vue.extend({
 
 
 Vue.component('componente-saludo', {
-   methods: {
+    data() {
+       return {
+          titulo: 'Olá - Introdução Componentes'
+       }
+    },
+    methods: {
        display() {
           console.log('Olá');
        }
