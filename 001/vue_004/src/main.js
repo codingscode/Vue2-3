@@ -9,7 +9,12 @@ Vue.config.productionTip = false
 }) */
 
 var componente2 = Vue.extend({
-   template: '<h3>Lista de Frameworks</h3>'
+   template: '<h3>{{ subtitulo }}</h3>',
+   data() {
+      return {
+         subtitulo: 'Lista de Frameworks'
+      }
+   }
 })
 
 var componente3 = Vue.extend({
