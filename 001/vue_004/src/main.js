@@ -3,9 +3,9 @@ import App from './App'
 
 Vue.config.productionTip = false
 
-var componente1 = Vue.extend({
+/* var componente1 = Vue.extend({
    template: '<h1>Olá - Introdução a componentes</h1>'
-})
+}) */
 
 var componente2 = Vue.extend({
    template: '<h3>Lista de Frameworks</h3>'
@@ -16,7 +16,7 @@ var componente3 = Vue.extend({
 })
 
 
-Vue.component('componente-saludo', componente1)
+Vue.component('componente-saludo', {})
 Vue.component('componente-titulo', componente2)
 Vue.component('componente-lista', componente3)
 
