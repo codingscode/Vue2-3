@@ -98,6 +98,7 @@ no terminal:
 
 
 
+clicar no titulo e ver o console
 
 
 

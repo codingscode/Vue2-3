@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 
+
 Vue.config.productionTip = false
 
 /* var componente1 = Vue.extend({
@@ -16,7 +17,13 @@ var componente3 = Vue.extend({
 })
 
 
-Vue.component('componente-saludo', {})
+Vue.component('componente-saludo', {
+   methods: {
+       display() {
+          console.log('Olá');
+       }
+    }
+})
 Vue.component('componente-titulo', componente2)
 Vue.component('componente-lista', componente3)
 
